@@ -7,8 +7,7 @@ export default function Home() {
   const [code, setCode] = useState(null);
   const [guild_id, setGuild_id] = useState(null);
 
-  // https://discord.com/api/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&response_type=code&scope=identify%20guilds%20messages.read%20applications.commands
-  const AUTH_URL = `https://discord.com/api/oauth2/authorize?client_id=1030193964676034610&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&response_type=code&scope=identify`;
+  const AUTH_URL = `https://discord.com/api/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&redirect_uri=${process.env.NEXT_PUBLIC_REDIRECT_URI}&response_type=code&scope=identify`;
 
   const router = useRouter();
 
